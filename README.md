@@ -1,2 +1,4 @@
 # Apache-Spark-Streaming-with-Apache-Kafka
-Real time Analytics with Apache Kafka and Apache Spark. Apache Kafka is a distributed publish-subscribe messaging while other side Spark Streaming brings Spark's language-integrated API to stream processing, allows to write streaming applications very quickly and easily. It supports both Python, Java and Scala.  In this tutorial we are going to explore Apache Kafka, Zookeeper and Spark with streaming example using Spark Streaming.
+Apache Kafka is a distributed publish-subscribe messaging while other side Spark Streaming brings Spark's language-integrated API to stream processing, allows to write streaming applications very quickly and easily.
+It supports both Python, Java and Scala. 
+In this tutorial we are going to explore Apache Kafka, Zookeeper and Spark with streaming example using Spark Streaming.
