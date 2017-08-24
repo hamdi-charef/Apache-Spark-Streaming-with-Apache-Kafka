@@ -12,7 +12,6 @@ __Prerequisites__
 	- Apache Kafka
 	- Apache Apache ZooKeeper
 
-__Approach 1: Receiver-based Approach: __
 __Approach 1: Receiver-based Approach:__
 
 This approach uses a Receiver to receive the data. The Receiver is implemented using the Kafka high-level consumer API. As with all receivers, the data received from Kafka through a Receiver is stored in Spark executors, and then jobs launched by Spark Streaming processes the data.
