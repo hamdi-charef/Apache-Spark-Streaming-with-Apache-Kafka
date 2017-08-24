@@ -1,7 +1,7 @@
 # Apache-Spark-Streaming-with-Apache-Kafka
 Apache Kafka is a distributed publish-subscribe messaging while other side Spark Streaming brings Spark's language-integrated API to stream processing, allows to write streaming applications very quickly and easily.<br />
 <br />
-It supports both Python, Java and Scala.<br />
+It supports Python, Java and Scala.<br />
 <br />
 In this tutorial we are going to explore Apache Kafka, Zookeeper and Spark with streaming example using Spark Streaming.<br />
 
@@ -27,7 +27,7 @@ Code example in the file “1_approach_spark_kafka.py”<br />
 For Python applications, spark-streaming-kafka-0-8_2.11 and its dependencies can be directly added to spark-submit using --package<br />
 
 ```
-spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 1_approach_spark_kafka.py localhost:9092 my_topic
+./spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 1_approach_spark_kafka.py localhost:9092 my_topic
 ```
 
 
@@ -47,6 +47,6 @@ Code example in the file “2_approach_spark_kafka.py”<br />
 For Python applications, spark-streaming-kafka-0-8_2.11 and its dependencies can be directly added to spark-submit using --package<br />
 
 ```
-spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 2_approach_spark_kafka.py localhost:9092 my_topic
+./spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 2_approach_spark_kafka.py localhost:9092 my_topic
 ```
 
