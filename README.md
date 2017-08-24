@@ -17,13 +17,17 @@ __Approach 1: Receiver-based Approach:__
 This approach uses a Receiver to receive the data. The Receiver is implemented using the Kafka high-level consumer API. As with all receivers, the data received from Kafka through a Receiver is stored in Spark executors, and then jobs launched by Spark Streaming processes the data.
 This approach can lose data under failures. To ensure zero-data loss, i have to additionally enable Write Ahead Logs in Spark Streaming. This synchronously saves all the received Kafka data into write ahead logs on a distributed file system (e.g HDFS), so that all the data can be recovered on failure.<br />
 In the streaming application code, import KafkaUtils and create an input DStream as follows.<br />
-Programming:<br />
+
+###Programming:<br />
 Code example in the file “1_approach_spark_kafka.py”<br />
 
-Deploying and running:<br />
+###Deploying and running:<br />
 For Python applications, spark-streaming-kafka-0-8_2.11 and its dependencies can be directly added to spark-submit using --package<br />
 
-spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 1_approach_spark_kafka.py localhost:9092 my_topic <br />
+```
+spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 1_approach_spark_kafka.py localhost:9092 my_topic
+```
+
 
 __Approach 2: Direct Approach (No Receivers)__
 
@@ -38,4 +42,7 @@ Code example in the file “2_approach_spark_kafka.py”<br />
 Deploying and running:<br />
 For Python applications, spark-streaming-kafka-0-8_2.11 and its dependencies can be directly added to spark-submit using --package<br />
 
+```
 spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 2_approach_spark_kafka.py localhost:9092 my_topic
+```
+
