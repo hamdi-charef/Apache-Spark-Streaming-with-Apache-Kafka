@@ -18,10 +18,12 @@ This approach uses a Receiver to receive the data. The Receiver is implemented u
 This approach can lose data under failures. To ensure zero-data loss, i have to additionally enable Write Ahead Logs in Spark Streaming. This synchronously saves all the received Kafka data into write ahead logs on a distributed file system (e.g HDFS), so that all the data can be recovered on failure.<br />
 In the streaming application code, import KafkaUtils and create an input DStream as follows.<br />
 
-###Programming:<br />
+### Programming:
+
 Code example in the file “1_approach_spark_kafka.py”<br />
 
-###Deploying and running:<br />
+### Deploying and running:
+
 For Python applications, spark-streaming-kafka-0-8_2.11 and its dependencies can be directly added to spark-submit using --package<br />
 
 ```
@@ -36,10 +38,12 @@ This is a new approach (introduced in Spark 1.3) without using Receivers. They h
 This approach periodically queries Kafka for the latest offsets in each topic+partition, and accordingly defines the offset ranges to process in each batch.<br />
 When the jobs to process the data are launched, Kafka’s simple consumer API is used to read the defined ranges of offsets from Kafka.<br />
 
-Programming:<br />
+###  Programming:
+
 Code example in the file “2_approach_spark_kafka.py”<br />
 
-Deploying and running:<br />
+### Deploying and running:
+
 For Python applications, spark-streaming-kafka-0-8_2.11 and its dependencies can be directly added to spark-submit using --package<br />
 
 ```
