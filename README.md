@@ -50,3 +50,31 @@ For Python applications, spark-streaming-kafka-0-8_2.11 and its dependencies can
 ./spark-submit --packages org.apache.spark:spark-streaming-kafka-0–8_2.11:2.0.0 2_approach_spark_kafka.py localhost:9092 my_topic
 ```
 
+
+__Apache Spark World count__
+
+In this part i will show how to run a Spark word count application.<br />__
+
+	- Creates a SparkContext. A Spark application corresponds to an instance of the SparkContext class. When running a shell, the SparkContext is 
+	reated or you. <br />
+	- Gets a word frequency threshold.<br />
+	- Reads an input set of text documents from the directory passed as an argument.<br />
+	- Counts the number of times each word appears.<br />
+
+###  Programming:
+
+Code example in the file “spark_world_count_folder.py”<br />
+
+### Deploying and running:
+
+For Python applications, we run with spark-submit python file parameters <br />
+
+```
+./spark-submit spark_world_count_folder.py ./data/
+
+or we can specify file type 
+
+./spark-submit spark_world_count_folder.py ./data/*.txt
+
+./spark-submit spark_world_count_folder.py ./data/*.csv
+```
