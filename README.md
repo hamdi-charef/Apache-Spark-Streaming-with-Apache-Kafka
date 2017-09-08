@@ -79,7 +79,7 @@ or we can specify file type
 ./spark-submit spark_world_count_folder.py ./data/*.csv
 ```
 
-__Apache Spark Streaming World count__
+### Apache Spark Streaming World count
 
 In this part i will show how to run a Apache Spark Streaming word count application which counts words from files in folder each 2 second batches of streaming data. <br />
 
@@ -92,11 +92,11 @@ In this part i will show how to run a Apache Spark Streaming word count applicat
 
 Run the program and start adding new files to the data folder.<br />
 
-###  Programming:
+__Programming:__
 
 Code example in the file “spark_streaming_world_count_folder.py”<br />
 
-### Deploying and running:
+__Deploying and running:__
 
 For Python applications, we run with spark-submit python file parameters <br />
 
